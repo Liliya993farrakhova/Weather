@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Slider from './components/Slider.vue';
+import Slider from 'vue-tiny-slider';
 import App from './App.vue'
 
 new Vue({
