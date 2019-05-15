@@ -63,7 +63,6 @@ export default{
             viewportMax: 400,
             controls: false,
             nav: false,
-            
         },
         active:{
           0:{
@@ -83,9 +82,7 @@ export default{
   },
   methods:{
       getData(){
-
         this.tree = require("raw-loader!./assets/images/Man-Reading-Book-Under-Tree-Silhouette.svg")['default'];
-
           axios.get(this.endpoint).then(response => {
               this.listWeathertData = response.data.list;
               for (var i = 0; i < this.listWeathertData.length; i++) {
@@ -103,8 +100,6 @@ export default{
             this.errored = true;
           })
           .finally(() => (this.loading = false));
-          
-
       },
       convertTemperature(temp) {
           return Math.round( +(temp) - 273.15) + '°C';
